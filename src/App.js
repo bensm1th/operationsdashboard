@@ -42,6 +42,10 @@ const initialState = {
   editedClass: {}
 }
 
+const responseGoogle = (response) => {
+  console.log(response);
+}
+
 class App extends Component {
   state = { 
     activeItem: 'Classes',
@@ -511,10 +515,13 @@ class App extends Component {
     console.log(this.state);
     return (
       <div className="App">
+        <div>
         <Menu 
           {...this.state}
           handleItemClick={this.handleItemClick}
         />
+
+        </div>
 
         {this.state.activeItem === "Classes" &&
         <div>

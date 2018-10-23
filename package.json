@@ -8,6 +8,7 @@
     "react": "^16.5.2",
     "react-datepicker": "^1.6.0",
     "react-dom": "^16.5.2",
+    "react-google-login": "^3.2.1",
     "react-scripts": "2.0.4",
     "react-table": "^6.8.6",
     "semantic-ui-react": "^0.82.5",

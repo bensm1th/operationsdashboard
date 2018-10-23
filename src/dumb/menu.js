@@ -1,5 +1,12 @@
 import React from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+
+
+const responseGoogle = (response) => {
+  console.log('google response --------------------------------------------------')
+  console.log(response);
+}
 
 const MenuExampleVerticalSecondary = props => {
 
@@ -16,6 +23,23 @@ const MenuExampleVerticalSecondary = props => {
         active={props.activeItem === 'Edit Class'}
         onClick={props.handleItemClick}
       />
+      <Menu.Item
+        position="right"
+      >
+          <GoogleLogin
+            clientId="97032283596-g1vg9i0rhrrj5o6m8fd1a9rih7m887ss.apps.googleusercontent.com"
+            buttonText="Login"
+            onSuccess={responseGoogle}
+            onFailure={responseGoogle}
+          />
+      </Menu.Item>
+      <Menu.Item>
+          <GoogleLogout
+            buttonText="Logout"
+            onLogoutSuccess={responseGoogle}
+          >
+        </GoogleLogout>
+      </Menu.Item>
     </Menu>
   )
 }
