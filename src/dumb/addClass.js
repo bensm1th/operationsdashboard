@@ -33,7 +33,7 @@ const AddClass = props => (
                     <Form.Field>
                         <label>Week of (Starting Monday)</label>
                         <DatePicker
-                            selected={props.weekOf}
+                            selected={moment(props.weekOf)}
                             onChange={value => props.handleChange(value, types.WEEK_OF)}
                         />
                     </Form.Field>
@@ -59,7 +59,7 @@ const AddClass = props => (
                     <Form.Field>
                         <label>Start Date</label>
                         <DatePicker
-                            selected={props.startDate}
+                            selected={moment(props.startDate)}
                             onChange={value => props.handleChange(value, types.START_DATE)}
                         />
                     </Form.Field>
@@ -127,14 +127,14 @@ const AddClass = props => (
                         <Dropdown 
                             placeholder="Sub Name"
                             options={props.TAs}
-                            onChange={(e, data) => props.handleSubChange(data.value, "SUB_NAME")}
+                            onChange={(e, data) => props.handleSubChange(data.value, types.SUB_NAME)}
                             value={props.subName}
                         />                    
                     </Form.Field>
                     <Form.Field>
                         <DatePicker
                             selected={props.subDate}
-                            onChange={value => props.handleSubChange(value, "SUB_DATE")}
+                            onChange={value => props.handleSubChange(value, types.SUB_DATE)}
                         />
                     </Form.Field>
                     <Form.Button color="green" onClick={props.addSubs}>Add Sub</Form.Button>

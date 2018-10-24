@@ -9,8 +9,13 @@
     "react-datepicker": "^1.6.0",
     "react-dom": "^16.5.2",
     "react-google-login": "^3.2.1",
+    "react-redux": "^5.0.7",
     "react-scripts": "2.0.4",
     "react-table": "^6.8.6",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
     "semantic-ui-react": "^0.82.5",
     "slate-edit-table": "^0.18.0"
   },
@@ -28,5 +33,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "redux-devtools": "^3.4.1"
+  }
 }
